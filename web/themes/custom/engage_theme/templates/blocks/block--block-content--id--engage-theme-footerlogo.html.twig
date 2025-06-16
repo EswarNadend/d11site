@@ -1,0 +1,9 @@
+<div{{ attributes }}>
+  {{ title_prefix }}
+  
+  {{ title_suffix }}
+  
+  {% block content %}
+    <img src="{{ file_url(content.field_footer_logo['#items'].0.entity.uri.value) }}" class="w-auto h-auto max-w-none" alt="Footer Logo" width="504" height="52"/>
+  {% endblock %}
+</div>
