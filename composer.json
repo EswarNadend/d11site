@@ -47,7 +47,8 @@
         "drupal/votingapi": "4.0.x-dev@dev",
         "drupal/webform": "^6.3@beta",
         "drupal/webform_rest": "^4.2",
-        "drupal/xhprof": "^2.0@beta"
+        "drupal/xhprof": "^2.0@beta",
+        "drupal/twig_tweak": "^3.4"
     },
     "require-dev": {
         "drupal/core-dev": "^11"
