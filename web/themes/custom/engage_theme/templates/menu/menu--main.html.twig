@@ -1,0 +1,25 @@
+{% import _self as menus %}
+
+{{ menus.menu_links(items, attributes.addClass('flex space-x-6'), 0) }}
+
+{% macro menu_links(items, attributes, menu_level) %}
+  {% import _self as menus %}
+  {% if items %}
+    {% if menu_level == 0 %}
+      <ul{{ attributes }}>
+    {% else %}
+      <ul class="ml-4 space-y-2">
+    {% endif %}
+    {% for item in items %}
+      <li{{ item.attributes.addClass('group relative') }}>
+        <a href="{{ item.url }}" class="text-lg font-semibold text-white hover:underline hover:decoration-yellow-400 decoration-2 underline-offset-4 transition">
+            {{ item.title|t }}
+        </a>
+        {% if item.below %}
+          {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+        {% endif %}
+      </li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endmacro %}
