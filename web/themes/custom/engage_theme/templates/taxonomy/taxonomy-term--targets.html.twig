@@ -1,0 +1,17 @@
+{# <div class=" mb-10 place-content-center hover:translate-y-2 xs:mb-0 s:mb-0">
+    <img src="{{ file_url(content.field_target_image.0['#item'].entity.uri.value) }}" class="object-contain mx-auto mb-2 xs:w-11 xs:h-11 s:w-11 s:h-11" alt="{{ name.0['#context'].value }}" width="100" height="100" />
+    <div class="text-lg text-center text-all_font_color font-700 opacity-1 leading-9 xs:text-sm s:text-sm">{{ name.0['#context'].value }}</div>
+</div> #}
+
+<div class="w-40 flex flex-col items-center text-center mb-10 hover:translate-y-2 transition-transform duration-200">
+  <img
+    src="{{ file_url(content.field_target_image.0['#item'].entity.uri.value) }}"
+    class="object-contain mb-2"
+    alt="{{ name.0['#context'].value }}"
+    width="100"
+    height="100"
+  />
+  <div class="text-lg text-all_font_color font-bold leading-6 text-center xs:text-sm s:text-sm">
+    {{ name.0['#context'].value }}
+  </div>
+</div>

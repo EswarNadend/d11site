@@ -1,0 +1,10 @@
+<div class="mx-auto max-w-screen-xl topbar bg-white py-2 px-4">
+  {% if label %}
+    <h2{{ title_attributes }} {{ attributes.addClass('font-semibold text-2xl md:text-5xl mb-8 lg:mt-16 lg:mb-16 font-nevis') }}>{{ label }}</h2>
+  {% endif %}
+  {% block content %}
+    <div class="each-targets flex justify-center gap-12">
+      {{ content }}
+    </div>
+  {% endblock %}
+</div>

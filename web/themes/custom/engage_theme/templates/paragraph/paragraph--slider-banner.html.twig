@@ -1,0 +1,14 @@
+<div class="slide relative w-full h-[500px] overflow-hidden">
+  {% if image_url %}
+    <div class="slide-image absolute inset-0 bg-center bg-cover bg-no-repeat" style="background-image: url('{{ image_url }}');"></div>
+  {% endif %}
+
+  <div class="slide-text absolute inset-0 z-10 flex flex-col justify-center text-white p-8 w-3/4 bg-transparent bg-opacity-100 rounded-md mx-auto">
+    {% if content.field_slider_banner_title %}
+      <h2 class="text-4xl font-bold mb-4 font-nevis">{{ content.field_slider_banner_title.0['#context'].value }}</h2>
+    {% endif %}
+    {% if content.field_slider_banner_body %}
+      <div class="body-text text-lg w-[55%]">{{ content.field_slider_banner_body[0]['#text']|raw }}</div>
+    {% endif %} 
+  </div>
+</div>
