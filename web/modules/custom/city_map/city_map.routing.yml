@@ -1,0 +1,7 @@
+city_map.city_map_form:
+  path: '/city-map'
+  defaults:
+    _form: '\Drupal\city_map\Form\CityMapForm'
+    _title: ''
+  requirements:
+    _permission: 'access content'

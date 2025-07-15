@@ -1,0 +1,213 @@
+#engage_form_input .js-form-item:not(.error) {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+/* Input, select, and date styling */
+#engage_form_input .js-form-item:not(.error) input,
+#engage_form_input .js-form-item:not(.error) select,
+#engage_form_input .js-form-item:not(.error) input[type="date"] {
+    padding: 1rem 0.625rem 0.625rem;
+    /* pt-4 px-2.5 pb-2.5 */
+    font-size: 0.875rem;
+    /* text-sm */
+    color: #111827;
+    /* text-gray-900 */
+    background-color: transparent;
+    border: 1px solid #D1D5DB;
+    /* border-gray-300 */
+    border-radius: 0.5rem;
+    /* rounded-lg */
+    width: 100%;
+    max-width: 100%;
+    appearance: none;
+}
+
+/* @media (min-width: 1024px) {
+
+    #engage_form_input .js-form-item:not(.error) input,
+    #engage_form_input .js-form-item:not(.error) select,
+    #engage_form_input .js-form-item:not(.error) input[type="date"] {
+        max-width: 32rem;
+    }
+} */
+
+/* On focus */
+#engage_form_input .js-form-item:not(.error) input:focus,
+#engage_form_input .js-form-item:not(.error) select:focus,
+#engage_form_input .js-form-item:not(.error) input[type="date"]:focus {
+    border-color: #F59E0B;
+    /* yellow-600 */
+    outline: none;
+    box-shadow: none;
+}
+
+/* Label default: inside the input */
+#engage_form_input .js-form-item:not(.error):not(.error) label {
+    position: absolute;
+    top: 0.50rem;
+    /* 12px from top */
+    left: 0.5rem;
+    /* px-2 */
+    font-size: 1rem;
+    /* 16px */
+    color: #4B5563;
+    /* gray-600 */
+    background-color: white;
+    padding: 0 0.5rem;
+    transition: all 0.3s ease;
+    transform-origin: left;
+    transform: translateY(0.25rem) scale(0.75);
+    /* appear embedded */
+    z-index: 10;
+    opacity: 0.8;
+}
+
+/* Label when input is focused or filled */
+#engage_form_input .js-form-item:not(.error) input:focus+label,
+#engage_form_input .js-form-item:not(.error) input:not(:placeholder-shown)+label,
+#engage_form_input .js-form-item:not(.error) select:focus+label,
+#engage_form_input .js-form-item:not(.error) select:not([value=""])+label,
+#engage_form_input .js-form-item:not(.error) input[type="date"]:focus+label,
+#engage_form_input .js-form-item:not(.error) input[type="date"]:not(:placeholder-shown)+label {
+    top: -1rem;
+    font-size: 0.875rem;
+    /* 14px */
+    color: #D97706;
+    /* amber-600 */
+    transform: translateY(0) scale(1);
+}
+
+/* Label when input is empty */
+#engage_form_input .js-form-item:not(.error) input:placeholder-shown+label,
+#engage_form_input .js-form-item:not(.error) input[type="date"]:placeholder-shown+label {
+    top: 50%;
+    transform: translateY(-50%) scale(1);
+    font-size: 1rem;
+}
+
+/* Disabled input styles */
+#engage_form_input .js-form-item:not(.error) input:disabled,
+#engage_form_input .js-form-item:not(.error) select:disabled,
+#engage_form_input .js-form-item:not(.error) input[type="date"]:disabled {
+    background-color: #f9fafb;
+    /* gray-50 */
+    color: #9ca3af;
+    /* gray-400 */
+}
+
+#engage_form_input .js-form-item:not(.error) label.floating {
+    top: -0.65rem;
+    transform: translateY(0) scale(0.875);
+    font-size: 0.875rem;
+    color: #D97706;
+}
+
+
+#engage_form_input .form-submit#edit-submit {
+    background-color: #ffcc00;
+    border-radius: 10px;
+    width: 180px;
+    height: 50px;
+    padding: 2px 2px 4px 2px;
+    font-size: 20px !important;
+    cursor: pointer;
+    color: #fff;
+    font-weight: 600;
+}
+
+#engage_form_input .js-form-item label.error {
+  position: static !important;
+  font-size: 1rem;
+  color: #DC2626 !important; /* red */
+  transform: none !important;
+  top: auto;
+  left: auto;
+  background: none;
+  padding: 0;
+}
+
+#engage_form_input .js-form-item.form-item-files-upload-file label{
+      position: static !important;
+   transform: none !important;
+  top: auto;
+  left: auto;
+  background: none;
+  padding: 0;
+    /* appear embedded */
+    z-index: 10;
+    opacity: 1;
+}
+#engage_form_input .js-form-item:not(.error).form-item-files-upload-file label[for='edit-upload-file'].floating{
+     top: auto;
+    transform: none !important;
+    color: #333333;
+}
+
+#engage_form_input .js-form-item:not(.error):not(.error) label.form-checkbox  {
+    position: Static;
+    top: auto;
+    /* 12px from top */
+    left: auto;
+    /* px-2 */
+    font-size: 2rem;
+    /* 16px */
+    color: #4B5563;
+    /* gray-600 */
+    background-color: none !important;
+    padding: 0;
+    /* transition: all 0.3s ease;
+    transform-origin: left; */
+    transform: none !important;
+    /* appear embedded */
+    z-index: 10;
+    opacity: 1;
+}
+
+#engage_form_input .form-type-checkbox label {
+  position: static !important;
+  transform: none !important;
+  background: none;
+  padding: 0;
+  color: #4B5563;
+  font-size: 1rem;
+  opacity: 1;
+}
+#engage_form_input .form-type-checkbox input{
+     padding: 0 !important;
+    /* pt-4 px-2.5 pb-2.5 */
+    font-size: 0.875rem;
+    /* text-sm */
+    color: #111827;
+    /* text-gray-900 */
+    background-color: transparent;
+    border: 1px solid #D1D5DB;
+    /* border-gray-300 */
+    border-radius: 0.5rem;
+    /* rounded-lg */
+    width: 1rem !important;
+    max-width: 100%;
+    appearance:auto !important;
+}
+#engage_form_input .form-type-checkbox{
+    display: contents !important;
+}
+
+/* .ideas-flex{
+    display: flex;
+    gap: 2rem;
+} */
+
+#edit-idea-content{
+    width:100%;
+}
+#ideas-form{
+    background-color: #f8f8f8;
+}
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+

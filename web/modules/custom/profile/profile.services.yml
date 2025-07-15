@@ -1,0 +1,8 @@
+services:
+  profile.profile_service:
+    class: Drupal\profile\Service\ProfileService
+    arguments:
+      - '@http_client'
+      - '@logger.factory'
+    tags:
+      - { name: 'controller.service_arguments' }

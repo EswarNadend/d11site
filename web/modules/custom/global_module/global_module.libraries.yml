@@ -1,0 +1,7 @@
+ajax_loader:
+  version: 1.x
+  js:
+    js/custom-ajax.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal

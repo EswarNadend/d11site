@@ -1,0 +1,25 @@
+profile.my_account:
+  path: '/my-account'
+  defaults:
+    _controller: '\Drupal\profile\Controller\ProfileController::myAccount'
+    _title: 'My Account'
+  requirements:
+    _permission: 'access content'
+
+profile.add_family_form:
+  path: "/add-family-member"
+  defaults:
+    _form: '\Drupal\profile\Form\AddFamilyMemberForm'
+    _title: ""
+  requirements:
+    _permission: "access content"
+    _role: 'authenticated'
+
+profile.change_password_form:
+  path: "/validate-password"
+  defaults:
+    _form: '\Drupal\profile\Form\ChangePasswordForm'
+    _title: ""
+  requirements:
+    _permission: "access content"
+    _role: 'authenticated'

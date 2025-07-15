@@ -1,0 +1,214 @@
+#engage_form_input .js-form-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+/* Input, select, and date styling */
+#engage_form_input .js-form-item input,
+#engage_form_input .js-form-item select,
+#engage_form_input .js-form-item input[type="date"] {
+    padding: 1rem 0.625rem 0.625rem;
+    /* pt-4 px-2.5 pb-2.5 */
+    font-size: 0.875rem;
+    /* text-sm */
+    color: #111827;
+    /* text-gray-900 */
+    background-color: transparent;
+    border: 1px solid #D1D5DB;
+    /* border-gray-300 */
+    border-radius: 0.5rem;
+    /* rounded-lg */
+    width: 100%;
+    max-width: 100%;
+    appearance: none;
+}
+
+@media (min-width: 1024px) {
+
+    #engage_form_input .js-form-item input,
+    #engage_form_input .js-form-item select,
+    #engage_form_input .js-form-item input[type="date"] {
+        max-width: 32rem;
+    }
+}
+
+/* On focus */
+#engage_form_input .js-form-item input:focus,
+#engage_form_input .js-form-item select:focus,
+#engage_form_input .js-form-item input[type="date"]:focus {
+    border-color: #F59E0B;
+    /* yellow-600 */
+    outline: none;
+    box-shadow: none;
+}
+
+/* Label default: inside the input */
+#engage_form_input .js-form-item label {
+    position: absolute;
+    top: 0.50rem;
+    /* 12px from top */
+    left: 0.5rem;
+    /* px-2 */
+    font-size: 1rem;
+    /* 16px */
+    color: #4B5563;
+    /* gray-600 */
+    background-color: white;
+    padding: 0 0.5rem;
+    transition: all 0.3s ease;
+    transform-origin: left;
+    transform: translateY(0.25rem) scale(0.75);
+    /* appear embedded */
+    z-index: 10;
+    opacity: 0.8;
+}
+
+/* Label when input is focused or filled */
+#engage_form_input .js-form-item input:focus+label,
+#engage_form_input .js-form-item input:not(:placeholder-shown)+label,
+#engage_form_input .js-form-item select:focus+label,
+#engage_form_input .js-form-item select:not([value=""])+label,
+#engage_form_input .js-form-item input[type="date"]:focus+label,
+#engage_form_input .js-form-item input[type="date"]:not(:placeholder-shown)+label {
+    top: -1rem;
+    font-size: 0.875rem;
+    /* 14px */
+    color: #D97706;
+    /* amber-600 */
+    transform: translateY(0) scale(1);
+}
+
+/* Label when input is empty */
+#engage_form_input .js-form-item input:placeholder-shown+label,
+#engage_form_input .js-form-item input[type="date"]:placeholder-shown+label {
+    top: 50%;
+    transform: translateY(-50%) scale(1);
+    font-size: 1rem;
+}
+
+/* Disabled input styles */
+#engage_form_input .js-form-item input:disabled,
+#engage_form_input .js-form-item select:disabled,
+#engage_form_input .js-form-item input[type="date"]:disabled {
+    background-color: #f9fafb;
+    /* gray-50 */
+    color: #9ca3af;
+    /* gray-400 */
+}
+
+#engage_form_input .js-form-item label.floating {
+    top: -0.65rem;
+    transform: translateY(0) scale(0.875);
+    font-size: 0.875rem;
+    color: #D97706;
+}
+
+
+#engage_form_input .form-submit {
+    background-color: #ffcc00;
+    border-radius: 10px;
+    width: 180px;
+    height: 50px;
+    padding: 2px 2px 4px 2px;
+    font-size: 20px !important;
+    cursor: pointer;
+    color: #fff;
+    font-weight: 600;
+}
+
+.paddingBox {
+    padding: 4px;
+}
+
+/* .my-account-wrapper{
+    max-height: 585px;
+    overflow-y: hidden;
+} */
+.my-account-wrapper.scroller {
+    height: 645px;
+    overflow-y: hidden;
+}
+
+
+.my-account-wrapper.scroller:hover {
+    overflow-y: auto;
+}
+
+
+/* Optional scrollbar styling */
+.my-account-wrapper.scroller::-webkit-scrollbar {
+    width: 6px;
+}
+
+.my-account-wrapper.scroller::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+}
+
+/* Pop Up CSS */
+
+.feedback_div_1 {
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.feedback_div_2 {
+    padding: 20px;
+    z-index: 99;
+    position: relative;
+}
+
+.client {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.thanks_title,
+.thanks_para {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.modal-action {
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+    display: flex;
+}
+
+.feedback_div_2 .emoji_happy {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.thanks_title p {
+    font-size: 28px;
+}
+
+.okay {
+    background-color: #ffcc00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+    font-weight: 700;
+    border-radius: 10px;
+}
+
+.ajax-progress.ajax-progress-throbber {
+    display: none !important;
+    /* Hides the spinner */
+}
+
+#profile-form-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+
+}
