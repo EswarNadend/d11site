@@ -1,0 +1,202 @@
+<style>
+	.news_page {
+		width: 100%;
+		max-width: 100%;
+	}
+	.offer-slider {
+		display: none;
+	}
+	.minlines {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+	}
+	.contenting .views-exposed-form .card-side {
+		padding-bottom: 1.25rem !important;
+	}
+
+	.contenting .views-exposed-form .card-title {
+		-webkit-line-clamp: 1;
+	}
+	.contenting .views-exposed-form .card-desc {
+		-webkit-line-clamp: 2;
+	}
+	#news_list .card-side img {
+		width: 100%;
+		min-width: 288px !important;
+		max-width: 288px !important;
+
+	}
+	.contenting .views-exposed-form .pager {
+		position: absolute;
+		left: 0;
+		bottom: -60px;
+
+	}
+	.contenting .views-exposed-form .pager ul {
+		display: flex;
+		gap: 10px;
+	}
+	.contenting .views-exposed-form .pager ul li {
+		padding: 5px 13px;
+		color: #3e3a3a !important;
+		border: 1px solid #cecece !important;
+		background-color: #FFF !important;
+	}
+	.contenting .views-exposed-form .pager ul:not(:last-child) {
+		width: 35px;
+		height: 35px;
+	}
+	.contenting .views-exposed-form .pager ul li.is-active {
+		color: #FFF !important;
+		border-color: inherit !important;
+		--tw-border-opacity: 1 !important;
+		border-color: hsl(var(--wa)/var(--tw-border-opacity)) !important;
+		--tw-bg-opacity: 1 !important;
+		background-color: hsl(var(--wa)/var(--tw-bg-opacity)) !important;
+		--tw-text-opacity: 1 !important;
+		width: 35px;
+		height: 35px;
+	}
+
+	{
+		# Sort and search #
+	}
+	#views-exposed-form-news-page {
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+		align-items: center;
+		position: absolute;
+		top: -110px;
+		left: 0;
+	}
+
+	#views-exposed-form-news-page .form-item-title {
+		width: 70%;
+	}
+	#views-exposed-form-news-page .form-item-title label,
+	#views-exposed-form-news-page .form-item-news-categories-id label,
+	#views-exposed-form-news-page .form-actions {
+		display: none;
+	}
+	#views-exposed-form-news-page .form-item-title .form-text {
+		width: 57%;
+		padding: 10px 20px;
+		border: 2px solid #cecece;
+		border-radius: 0.5rem;
+	}
+	#views-exposed-form-news-page .form-item-news-categories-id select,
+	#views-exposed-form-news-page .form-item-field-news-categories-target-id select {
+		height: 45px;
+		padding: 10px 40px 10px 5px;
+		border: 2px solid #cecece;
+		border-radius: 0.5rem;
+		color: #797979;
+	}
+
+	@media screen and(max-width:576px) and(min-width:319px) {
+		.contenting .views-exposed-form .pager {
+			position: absolute;
+			top: 100%;
+			left: 0 !important;
+		}
+		.contenting .views-exposed-form .pager ul li {
+			padding: 5px 10px;
+		}
+		.card-side .card-desc {
+			-webkit-line-clamp: 4;
+		}
+		.contenting .views-exposed-form .card-side img {
+			min-width: 100% !important;
+			width: 100% !important;
+			height: auto;
+		}
+		#views-exposed-form-news-mobile-news {
+			display: flex !important;
+			width: 100%;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			margin: 15px 0;
+			align-items: baseline;
+		}
+		#views-exposed-form-news-mobile-news .form-item-title {
+			width: 70%;
+		}
+		#views-exposed-form-news-mobile-news .form-item-title label,
+		#views-exposed-form-news-mobile-news .form-item-news-categories-id label {
+			display: none;
+		}
+		#views-exposed-form-news-mobile-news .form-item-title input {
+			font-size: 12px;
+			width: 100%;
+			padding: 10px;
+			font-family: nevis;
+			font-weight: 100;
+			border: 1px solid #cecece;
+			border-radius: 0.5rem;
+		}
+		#views-exposed-form-news-mobile-news .form-item-news-categories-id {
+			width: 25%;
+		}
+		#views-exposed-form-news-mobile-news .form-item-news-categories-id select {
+			width: 100%;
+			height: 40px;
+			border: 1px solid #cecece;
+			border-radius: 0.5rem;
+			font-size: 12px;
+			padding: 2px;
+		}
+		#views-exposed-form-news-mobile-news .form-actions {
+			display: none;
+		}
+	}
+</style>
+{{ page.content.engage_theme_homepagesliderbannerblock }}
+<div class="hidden sm:hidden border-t border-[#dedede] border-dotted absolute top-10 mt-3"></div>
+
+<div class="contenting container mx-auto mt-20 mb-40 sm:p-5 md:px-20 md:pb-20 relative xs:p-5 xs:mt-0 xs:mb-0 s:p-5 s:mt-0 s:mb-0">
+	<div class="flex justify-center">
+		<div class="container px-14 my-account-wrapper">
+			<div
+				class="flex justify-between items-center">
+				<!-- Back Arrow Button -->
+				<img
+				src="themes/custom/engage_theme/images/Profile/reverse-arrow.svg" alt="Back Arrow" class="w-5 sm:w-7 cursor-pointer object-contain" onclick="history.go(-1)"/>
+
+				<!-- Heading -->
+				<h1 class="text-xl sm:text-2xl md:text-5xl font-bold text-center mt-8 md:mt-12 mb-8 md:mb-20 translateLabel search_field" label-alias="la_my_profile">
+					Ideas
+				</h1>
+				<!-- Placeholder for symmetry -->
+				<div class="w-5 sm:w-7"></div>
+			</div>
+		</div>
+	</div>
+	
+	{# <div class="engage_theme_ideas container ideas_page mx-auto mt-20 mb-40 sm:p-5 md:px-20 md:pb-20 relative xs:p-5 xs:mt-0 xs:mb-0 s:p-5 s:mt-0 s:mb-0">
+		{{ page.content.engage_theme_content }}
+	</div> #}
+	<div class="below_heading_section relative">
+			<div class="all_news_list all_list ideas_list mt-5" id>
+				<div class="xs:hidden s:hidden border-t border-[#dedede] border-solid dottedBorder absolute top-16 mt-3"></div>
+				<div class="xs:hidden s:hidden solid border-solid border-2 rounded-2xl p-5 bg-white relative top-28">
+					<div class="text-right">
+							{% if(userLogged == true) %}
+								<a class="btn subscription_btn gap-2 px-6 text-white text-xl capitalize font-bold font-['Open_Sans'] mb-5" href="./add-ideas" target="_self"><img class="object-contain cursor-pointer sm:w-6 s:w-5 xs:w-5" src="themes/engage/images/plus_mark.svg" alt="arrow back">Submit New Idea</a>
+							{% endif %}
+						</div>
+					<div class="flex flex-col overflow-y-auto" id="news_list" style="height: 100%;max-height: 700px !important;">
+
+						
+						{{ page.content.engage_theme_content }}
+					</div>
+
+				</div>
+				<div class="xs:block s:block hidden mt-5">
+					{# {{ drupal_view('news', 'mobile_news') }} #}
+				</div>
+			</div>
+		</div>
+</div>

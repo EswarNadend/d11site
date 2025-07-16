@@ -1,0 +1,786 @@
+/* Login button CSS */
+.login-btn {
+  background: #f8cd46 !important;
+  border-radius: 20px !important;
+  font-size: 16px;
+  text-transform: none;
+}
+
+.wide_login_btn {
+  width: 180px;
+}
+
+.shadow {
+  position: absolute;
+  z-index: 99;
+  width: -webkit-fill-available;
+}
+
+body {
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'nevis-bold', 'nevis', 'sans-serif';
+  background: #ffffff;
+  overflow-x: hidden;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+.loading {
+  font-size: 20px;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #000000bf;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
+  z-index: 99999;
+  overflow-y: hidden !important;
+  overflow-x: hidden !important;
+}
+
+.loader-img {
+  margin: auto;
+  position: sticky;
+  top: 100px;
+}
+
+.engage-btn {
+  background-color: #f59e0b !important;
+  /* yellow-500 */
+  color: white;
+  width: 10rem;
+  /* 40 x 0.25rem = 10rem = 160px */
+  height: 3rem;
+  /* 12 x 0.25rem = 3rem = 48px */
+  font-size: 1.125rem;
+  /* text-lg = 18px */
+  font-family: 'Open Sans', sans-serif;
+  border-radius: 0.25rem;
+  /* rounded = 4px */
+  transition: background-color 0.2s ease;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  /* font-size: unset; */
+  font-weight: bold !important;
+}
+
+.engage-btn:hover {
+  background-color: #d97706 !important;
+  /* yellow-600 */
+}
+
+.engage-cancel-btn {
+  background-color: transparent;
+
+  color: #000000bf;
+  width: 180px;
+  height: 50px;
+  font-size: 1.125rem;
+  font-family: 'Open Sans', sans-serif;
+  border-radius: 10px;
+
+  transition: background-color 0.2s ease;
+  border: 1px solid #00000043;
+  cursor: pointer;
+  display: inline;
+  /* font-size: unset; */
+  font-weight: bold !important;
+
+}
+
+#views-exposed-form-faq-page-1 .js-form-item label {
+  display: none !important;
+}
+
+
+
+#views-exposed-form-blogs-page-1 .form-item-title .form-text {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  position: relative;
+  top: 0px;
+  margin-bottom: 1.25rem;
+  padding: 10px 20px;
+  border: 2px solid #cecece;
+  border-radius: 0.5rem;
+}
+
+#views-exposed-form-tenders-page-page-1 .form-item-sort-by label,
+#views-exposed-form-tenders-page-page-1 .form-item-sort-order label,
+#views-exposed-form-faq-page-1 .form-item-field-faq-category-target-id label {
+  display: none;
+}
+
+#views-exposed-form-tenders-page-page-1 .form-item-sort-by select,
+#views-exposed-form-tenders-page-page-1 .form-item-sort-order select {
+  height: 45px;
+  padding: 10px 40px 10px 5px;
+  border: 2px solid #cecece;
+  border-radius: 0.5rem;
+  color: #797979;
+  width: 232px !important;
+  margin: 0px 10px !important;
+}
+
+/* Faq */
+#views-exposed-form-faq-page-1 {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  /* position: absolute;
+  top: -110px; */
+  margin-bottom: 1.25rem;
+  left: -15px;
+  justify-content: center;
+  align-items: baseline;
+  gap: 2rem;
+}
+
+#views-exposed-form-faq-page-1 .form-item-field-faq-category-target-id select {
+  width: 100%;
+  height: 45px;
+  padding: 10px 40px 10px 5px;
+  border: 2px solid #cecece;
+  border-radius: 0.5rem;
+  color: #797979;
+}
+
+#views-exposed-form-faq-page-1 .form-item-field-faq-category-target-id .shs-field-container {
+  display: flex;
+  gap: 20px;
+}
+
+#views-exposed-form-faq-page-1 .form-item-title {
+  width: 45%;
+}
+
+#views-exposed-form-faq-page-1 .form-item-title input {
+  padding: 10px 20px;
+  border: 2px solid #cecece;
+  border-radius: 0.5rem;
+}
+
+#views-exposed-form-faq-page-1 .form-item-title label,
+#views-exposed-form-faq-page-1 .form-item-field-job-category-target-id label,
+#views-exposed-form-faq-page-1 .form-item-field-job-role-target-id label {
+  display: none;
+}
+
+#views-exposed-form-faq-page-1 .form-item-title .form-text {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  position: relative;
+  top: 0px;
+  margin-bottom: 1.25rem;
+}
+
+/* FAQ Collapse Styles */
+.collapse-title {
+  font-size: 1.2rem;
+  /* text-md (~16px) */
+  color: #797979;
+  /* text-medium_dark (custom color class) */
+  font-weight: 700;
+  /* font-bold */
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* The "peer-checked:rounded-b-0" requires JS/CSS logic with sibling or parent selector. Here's a rough idea: */
+.peer:checked~.collapse-title {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+/* Small screens (640px and below) - Tailwind's `xs:` breakpoint */
+@media (max-width: 640px) {
+  .collapse-title {
+    padding-top: 1.25rem;
+    /* py-5 */
+    padding-bottom: 1.25rem;
+    text-align: start;
+    font-size: 0.875rem;
+    /* text-sm */
+  }
+}
+
+/* Between 641px and 768px - Tailwind's `s:` custom breakpoint */
+@media (min-width: 641px) and (max-width: 768px) {
+  .collapse-title {
+    padding-top: 1.25rem;
+    /* py-5 */
+    padding-bottom: 1.25rem;
+    text-align: start;
+    font-size: 0.875rem;
+    /* text-sm */
+  }
+}
+
+.collapse-arrow .collapse-title:after {
+  content: "";
+  position: absolute;
+  right: 6rem !important;
+  border-color: hsl(var(--bc)/var(--tw-border-opacity));
+  background-color: hsl(var(--b1)/var(--tw-bg-opacity));
+  border-radius: var(--rounded-btn, .5rem);
+  background-image: linear-gradient(45deg, #0000 50%, currentColor 50%), linear-gradient(135deg, currentColor 50%, #0000 50%);
+  background-position: calc(100% - 20px) 50%, calc(100% - 10px) 50%;
+  background-repeat: no-repeat;
+  background-size: 10px 8px, 11px 9px;
+  flex-shrink: 0;
+  padding-left: 1rem;
+  padding-right: 2.5rem;
+  font-size: .875rem;
+  font-weight: 600;
+  line-height: 2;
+  transition: color .2s, background-color .2s, border-color .2s, text-decoration-color .2s, fill .2s, stroke .2s, opacity .2s, box-shadow .2s, transform .2s, filter .2s, backdrop-filter .2s;
+  display: inline-flex;
+  box-shadow: none !important;
+  transform: none !important;
+  height: 1rem !important;
+  width: 2rem !important;
+  top: 35% !important;
+}
+
+/* Text wrapping */
+.collapse-title {
+  text-wrap: balance !important;
+}
+
+/* Select dropdowns fix */
+.select {
+  background-size: 7px 4px, 4px 4px !important;
+}
+
+/* FAQ responsive styles */
+@media screen and (max-width: 425px) {
+  .faq-mobile-view {
+    display: block;
+  }
+
+  .faq-window-view {
+    display: none;
+  }
+
+  .category-selection,
+  .sub-category-selection {
+    width: 100%;
+    min-width: 100% !important;
+  }
+
+  .collapse-arrow .collapse-title:after {
+    right: 1rem !important;
+    bottom: 0 !important;
+    background-position: calc(100% - 6px) -3px, calc(100% + 4px) 35%;
+    padding: 0;
+    height: 0.5rem !important;
+    width: 1rem !important;
+  }
+
+  .faq-lists .collapse:last-child {
+    border: 0 !important;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .faq-mobile-view {
+    display: block;
+  }
+
+  .faq-window-view {
+    display: none;
+  }
+
+  .category-selection,
+  .sub-category-selection {
+    width: 100%;
+    min-width: 100% !important;
+  }
+
+  .collapse-arrow .collapse-title:after {
+    right: 0 !important;
+    bottom: 0 !important;
+    background-position: calc(100% - 6px) -3px, calc(100% + 4px) 35%;
+    padding: 0;
+    height: 0.5rem !important;
+    width: 1rem !important;
+  }
+
+  .faq-lists .collapse:last-child {
+    border: 0 !important;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .faq-mobile-view {
+    display: block;
+  }
+
+  .faq-window-view {
+    display: none;
+  }
+
+  .category-selection,
+  .sub-category-selection {
+    width: 100%;
+    min-width: 100% !important;
+  }
+
+  .collapse-arrow .collapse-title:after {
+    right: 0 !important;
+    bottom: 0 !important;
+    background-position: calc(100% - 6px) -3px, calc(100% + 4px) 35%;
+    padding: 0;
+    height: 0.5rem !important;
+    width: 1rem !important;
+  }
+
+  .faq-lists .collapse:last-child {
+    border: 0 !important;
+  }
+}
+
+.faq-section {
+  border: 2px solid inherit;
+  border-radius: 0.5rem;
+  /* rounded-lg */
+  margin-top: 2rem;
+  /* mt-8 */
+}
+
+/* Small screens (s:) */
+@media (max-width: 768px) {
+  .faq-section {
+    margin-top: 0;
+    border-radius: 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 2px solid #CECECE;
+  }
+}
+
+/* Extra-small screens (xs:) */
+@media (max-width: 640px) {
+  .faq-section {
+    margin-top: 0;
+    border-radius: 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 2px solid #CECECE;
+  }
+}
+
+.collapse-title {
+  font-size: 1rem;
+  /* text-md */
+  color: #797979;
+  /* Assuming 'text-medium_dark' is a custom color */
+  /* background-color: #f5f5f5;  */
+  font-weight: bold;
+  /* font-bold */
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* If using a `peer` input and applying styles when it's checked */
+.peer:checked~.collapse-title {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+/* Small screens (s:) */
+@media (max-width: 768px) {
+  .collapse-title {
+    padding-top: 1.25rem;
+    /* py-5 */
+    padding-bottom: 1.25rem;
+    text-align: left;
+    /* text-start */
+    font-size: 0.875rem;
+    /* text-sm */
+  }
+}
+
+/* Extra-small screens (xs:) */
+@media (max-width: 640px) {
+  .collapse-title {
+    padding-top: 1.25rem;
+    /* py-5 */
+    padding-bottom: 1.25rem;
+    text-align: left;
+    font-size: 0.875rem;
+  }
+}
+
+.collapse-content {
+  max-height: 0;
+  cursor: unset;
+  grid-row-start: 2;
+  /* padding-left: 1rem;
+    padding-right: 1rem; */
+  transition: padding .2s ease-in-out, background-color .2s ease-in-out;
+  overflow: hidden;
+}
+
+.collapse-content p {
+  color: #3e3a3a;
+  opacity: 0.8;
+  font-weight: 500;
+  /* font-medium */
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 8px;
+}
+
+/* Small screens (s:) */
+@media (max-width: 768px) {
+  .collapse-content p {
+    font-size: 0.875rem;
+    /* text-sm */
+    padding-top: 1rem;
+    /* pt-4 */
+    text-align: left;
+    /* text-start */
+  }
+}
+
+/* Extra-small screens (xs:) */
+@media (max-width: 640px) {
+  .collapse-content p {
+    font-size: 0.875rem;
+    padding-top: 1rem;
+    text-align: left;
+  }
+}
+
+.collapse-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  background-color: #ffffff;
+}
+
+.collapse.active .collapse-content {
+  max-height: fit-content;
+  /* or enough height to show full content */
+}
+
+.collapse-title {
+  cursor: pointer;
+  /* padding: 1rem; */
+  font-weight: bold;
+  /* background: #f5f5f5; */
+  font-family: 'Open Sans', sans-serif;
+}
+
+.collapse {
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  padding: 1rem 3rem 1rem 1rem;
+}
+
+.background-faq .views-row .views-field-nothing {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+/* Small screens (sm:) — min-width: 640px */
+@media (min-width: 640px) {
+  .background-faq .views-row .views-field-nothing {
+    /* padding: 1.25rem;  */
+  }
+}
+
+/* Medium screens (md:) — min-width: 768px */
+@media (min-width: 768px) {
+  .background-faq .views-row .views-field-nothing {
+    padding-left: 5rem;
+    /* md:px-20 */
+    width: 90%;
+    padding-right: 5rem;
+  }
+}
+
+/* Extra small screens (xs:) — max-width: 640px */
+@media (max-width: 640px) {
+  .background-faq .views-row .views-field-nothing {
+    /* xs:p-5 */
+    margin-top: 0;
+    /* xs:mt-0 */
+    margin-bottom: 5rem;
+    /* xs:mb-20 */
+  }
+}
+
+
+/* Small screens (s:) — custom breakpoint? Treat as max-width: 768px */
+@media (max-width: 768px) {
+  .background-faq .views-row .views-field-nothing {
+    /* padding: 1.25rem;    */
+    margin-top: 0;
+    /* s:mt-0 */
+    margin-bottom: 5rem;
+    /* s:mb-20 */
+  }
+}
+
+.background-faq {
+  margin-bottom: 80px;
+}
+
+.background-faq {
+  position: relative;
+  margin-left: 15rem;
+  margin-right: 15rem;
+}
+
+.background-faq::before {
+  content: "";
+  position: absolute;
+  top: calc(100% - 67%);
+  left: 0;
+  right: 0px;
+  bottom: -45px;
+  border: 2px solid #e5e7eb;
+  pointer-events: none;
+  z-index: -1;
+  border-radius: 15px;
+}
+
+
+
+#views-exposed-form-ideas-page-1 .js-form-item label {
+  display: none;
+}
+
+#views-exposed-form-ideas-page-1 .js-form-item [name='ideas_categories_id'] {
+  height: 45px;
+  padding: 10px 40px 10px 5px;
+  border: 2px solid #cecece;
+  border-radius: 0.5rem;
+  color: #797979;
+}
+
+#views-exposed-form-ideas-page-1 .form-item-ideas-categories-id {
+  border-bottom: 1px solid #dedede;
+  padding-bottom: 40px;
+  /* position: absolute; */
+  top: 4rem;
+  /* equivalent to top-16 in Tailwind (16 * 0.25rem) */
+  margin-top: 0.75rem;
+  /* equivalent to mt-3 in Tailwind (3 * 0.25rem) */
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: -140px;
+  left: 0;
+}
+
+@media (max-width: 639px) {
+
+  /* xs:hidden */
+  #views-exposed-form-ideas-page-1 .form-item-ideas-categories-id {
+    display: none;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 767px) {
+
+  /* s:hidden */
+  #views-exposed-form-ideas-page-1 .form-item-ideas-categories-id {
+    display: none;
+  }
+}
+
+.contenting .views-row .views-field-nothing .card-side img {
+  width: 100%;
+  min-width: 288px !important;
+  max-width: 288px !important;
+  height: 12rem;
+}
+
+.contenting .views-row .views-field-field-rating {
+  right: 0px;
+  padding: 0px 10px 0px 0px;
+}
+
+.contenting .views-row .views-field-field-rating .js-form-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  align-items: end;
+}
+
+.contenting .subscription_btn {
+  background: #fc0 !important;
+  border: 1px solid #fc0 !important;
+  padding-left: 1.5rem;
+  /* px-6 */
+  padding-right: 1.5rem;
+  color: #ffffff;
+  font-size: 1.25rem;
+  /* text-xl */
+  text-transform: capitalize;
+  font-weight: bold;
+  font-family: 'Open Sans', sans-serif;
+  margin-top: 1.25rem;
+  /* mt-5 */
+  padding-top: 0.7rem;
+  border-radius: 10px;
+  padding-bottom: 0.7rem;
+}
+
+/* Drupal pagination custom css starts */
+
+.contenting [role="navigation"] {
+  position: absolute;
+  left: 0;
+  bottom: -60px;
+}
+
+#pagination-heading {
+  position: absolute !important;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  width: 1px;
+  height: 1px;
+  word-wrap: normal;
+}
+
+.pager ul {
+  display: flex;
+  gap: 10px;
+}
+
+.pager ul li.is-active {
+  color: #FFF !important;
+  border-color: inherit !important;
+  --tw-border-opacity: 1 !important;
+  border-color: #e5e7eb !important;
+  --tw-bg-opacity: 1 !important;
+  background-color:#f8cd46 !important;
+  --tw-text-opacity: 1 !important;
+  width: 35px;
+  height: 35px;
+}
+
+.pager ul li {
+  padding: 5px 13px;
+  color: #3e3a3a !important;
+  border: 1px solid #cecece !important;
+  background-color: #FFF !important;
+}
+
+/* Drupal Pagination custom css ends */
+
+/* copied css starts*/
+
+.copied {
+    animation: blink 2.5s infinite;
+}
+
+/* Copied Css ends */
+
+
+
+.comments-title {
+  opacity: 0.9;
+  font-size: 20px;
+  line-height: 1.5rem;
+  color: #414141;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #cecece;
+}
+
+.ideas_comment .single-comment-content .links,
+#comment-form #edit-actions,
+#node-ideas-form #edit-actions {
+  display: flex;
+  gap: 10px;
+  margin: 15px 0px 0px;
+}
+
+.ideas_comment .single-comment-content .links li,
+#comment-form input[type="submit"],
+.add-comment-title {
+  background: #fc0;
+  border: 1px solid #fc0;
+  color: #fff;
+  padding: 5px 15px;
+  border-radius: 0.5rem;
+}
+
+.ideas_comment .single-comment-content div p {
+  font-size: 16px;
+  font-family: "Open Sans";
+  color: #404040;
+}
+
+.ideas_comment .single-comment-content-body {
+  width: 50%;
+}
+
+.ideas_comment .single-comment-content-body span {
+  color: #676767;
+  font-weight: 700;
+  font-family: "OpenSans-Regular", "Open Sans", sans-serif;
+  display: flex;
+  justify-content: space-between;
+}
+
+#node-comment {
+  padding: 30px 0px 0px;
+}
+
+#node-comment article {
+  padding: 25px 0px 0px;
+}
+
+.add-comment-title {
+  width: 240px;
+  padding: 10px;
+  height: 50px;
+  text-align: center;
+}
+
+.comment-form-wrap {
+  margin: 25px 0px 0px;
+}
+#node-comment article a{
+  display: none;
+}
+#node-comment article footer{
+  display:flex;
+      justify-content: left;
+    align-items: baseline;
+    gap: 20%;
+        color: #676767;
+    font-weight: 700;
+    font-family: "OpenSans-Regular", "Open Sans", sans-serif;
+}
+/* .comment-form-wrap label{
+  display: none;
+} */
+/* Comment section */
+#edit-subject-wrapper, #edit-comment-body-0-format-help-about{
+  display: none;
+}
+#edit-comment-body-wrapper{
+  margin-bottom: 10px;
+  margin-top: 10px;
+}

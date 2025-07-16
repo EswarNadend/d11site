@@ -143,6 +143,7 @@ class ProfileForm extends FormBase {
     ],
     ];
   $form['#attached']['library'][] = 'profile/profile_form_popup';
+  $form['#attached']['library'][] = 'global_module/ajax_loader';
   return $form;
 }
 //  $family_members = $this->profileService->fetchFamilyMembers($user_id);

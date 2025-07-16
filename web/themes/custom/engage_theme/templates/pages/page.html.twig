@@ -1,63 +1,72 @@
 <div class="mx-auto max-w-screen-xl topbar bg-white py-2 px-4">
-  <div class="flex flex-wrap items-center justify-between gap-4 w-full">
-    {{ page.header }}
-  </div>
+	<div class="flex flex-wrap items-center justify-between gap-4 w-full">
+		{{ page.header }}
+	</div>
 </div>
 <header class="bg-black shadow">
-  <div class="px-20 flex items-center justify-between mx-auto max-w-screen-xl">
-    <div class="branding">
-      {{ drupal_block('system_branding_block') }}
-    </div>
-    <nav class="main-menu text-white">
-      {{ drupal_menu('main') }}
-    </nav>
+	<div class="px-20 flex items-center justify-between mx-auto max-w-screen-xl">
+		<div class="branding">
+			{{ drupal_block('system_branding_block') }}
+		</div>
+		<nav class="main-menu text-white">
+			{{ drupal_menu('main') }}
+		</nav>
 
-    <div class="open-id-connect">
-      <a class="bg-yellow-500 text-white rounded-full px-6 py-2 hover:bg-yellow-600 transition" href="/user/login">
-        Login
-      </a>
-    </div>
-  </div>
+		<div class="open-id-connect items-center flex gap-4">
+			{% if logged_in %}
+				<div class="bg-yellow-500 text-white rounded-full px-6 py-2">
+					Welcome,
+					{{ user_display_name }}!
+				</div>
+        <div>
+        <a href="/user/logout" class="text-white rounded-full bg-yellow-500 rounded px-6 py-2">Log Out</a>
+        </div>
+			{% else %}
+					{{ idam_integration }}
+			{% endif %}
+		</div>
+
+	</div>
 </header>
 {# {{ page.primary_menu }} #}
 {{ page.highlighted }}
 {{ page.help }}
 <div class="">
-  {% if page.sidebar %}
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
-      <main class="lg:col-span-8">
-        {{ page.content }}
-      </main>
-      <aside class="lg:col-span-4">
-        {{ page.sidebar }}
-      </aside>
-    </div>
-  {% else %}
-    <div>
-      {{ page.content }}
-    </div>
-  {% endif %}
+	{% if page.sidebar %}
+		<div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+			<main class="lg:col-span-8">
+				{{ page.content }}
+			</main>
+			<aside class="lg:col-span-4">
+				{{ page.sidebar }}
+			</aside>
+		</div>
+	{% else %}
+		<div>
+			{{ page.content }}
+		</div>
+	{% endif %}
 </div>
 
 {# {% if page.footer %} #}
 <footer class="page-footer bg-black p-10">
-  <div class="flex  justify-between pb-10 gap-3">
-    {{ page.footer }}
-    {# {{ drupal_block('user_visit_count_block') }} #}
-  </div>
-  <div class="footer grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-10">
-    {% if page.footer_first %}
-      <div class="col-span-12 lg:col-span-4 leading-8">{{ page.footer_first }}</div>
-    {% endif %}
-    {% if page.footer_second %}
-      <div class="col-span-6 sm:col-span-1 lg:col-span-2 ps-6">{{ page.footer_second }}</div>
-    {% endif %}
-    {% if page.footer_third %}
-      <div class="col-span-6 sm:col-span-1 lg:col-span-2 ps-6">{{ page.footer_third }}</div>
-    {% endif %}
-    {% if page.footer_fourth %}
-      <div class="col-span-12 lg:col-span-4 ps-8">{{ page.footer_fourth }}</div>
-    {% endif %}
-  </div>
+	<div class="flex  justify-between pb-10 gap-3">
+		{{ page.footer }}
+		{# {{ drupal_block('user_visit_count_block') }} #}
+	</div>
+	<div class="footer grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-10">
+		{% if page.footer_first %}
+			<div class="col-span-12 lg:col-span-4 leading-8">{{ page.footer_first }}</div>
+		{% endif %}
+		{% if page.footer_second %}
+			<div class="col-span-6 sm:col-span-1 lg:col-span-2 ps-6">{{ page.footer_second }}</div>
+		{% endif %}
+		{% if page.footer_third %}
+			<div class="col-span-6 sm:col-span-1 lg:col-span-2 ps-6">{{ page.footer_third }}</div>
+		{% endif %}
+		{% if page.footer_fourth %}
+			<div class="col-span-12 lg:col-span-4 ps-8">{{ page.footer_fourth }}</div>
+		{% endif %}
+	</div>
 </footer>
 {# {% endif %} #}

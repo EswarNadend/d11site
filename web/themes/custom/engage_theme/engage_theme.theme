@@ -5,17 +5,54 @@ use Drupal\Core\Render\Element;
 /**
  * Implements hook_preprocess_page().
  */
-function engage_theme_preprocess_page(array &$variables)
-{
-  // Detect if the homepage slider field is present.
-  // if (_engage_theme_has_homepage_slider($variables)) {
-    $variables['#attached']['library'][] = 'engage_theme/flexslider';
-  // }
 
-  // Detect if the advertisement swiper is present.
-  // if (_engage_theme_has_homepage_advertisement_slider($variables)) {
-    $variables['#attached']['library'][] = 'engage_theme/swiper';
+function engage_theme_preprocess_page(array &$variables) {
+  // Attach assets
+  $variables['#attached']['library'][] = 'engage_theme/flexslider';
+  $variables['#attached']['library'][] = 'engage_theme/swiper';
+  $variables['#attached']['library'][] = 'engage_theme/global-library';
+  $variables['#attached']['library'][] = 'engage_theme/global-styling';
+  $variables['#attached']['library'][] = 'engage_theme/global-scripts';
+
+  // Ensure user-specific data varies by user
+  $variables['#cache']['contexts'][] = 'user';
+
+  if (!empty($variables['user'])) {
+    $variables['user_display_name'] = $variables['user']->getDisplayName();
+  }
+  //   if ($variables['node']->bundle() == 'ideas') {
+  //   $variables['userLogged'] = \Drupal::currentUser()->isAuthenticated();
   // }
+  $global_service = \Drupal::service('global_module.global_variables');
+
+  $globalVariables = $global_service->getGlobalVariables();
+  $machine_name = 'openidconnectlogin';
+// print_r($machine_name);exit;
+	$block = \Drupal::entityTypeManager()->getStorage('block')->load($machine_name);
+  // print_r("Block",$block);exit;
+	if (!empty($block)) {
+		$block_content = \Drupal::entityTypeManager()->getViewBuilder('block')->view($block);
+		$pre_render = $block_content;
+		$variables['idam_integration'] = $block_content;
+	}
+
+
+  //globalVariables
+    $variables['#attached']['drupalSettings']['globalVariables']['webportalUrl'] = $globalVariables['applicationConfig']['config']['siteUrlddev'];
+   $variables['#attached']['drupalSettings']['globalVariables']['fileuploadPath'] = $globalVariables['applicationConfig']['config']['fileuploadPath'];
+    $variables['#attached']['drupalSettings']['globalVariables']['fileuploadUrl'] = $globalVariables['applicationConfig']['config']['fileuploadUrl'];
+    $variables['#attached']['drupalSettings']['globalVariables']['siteUrl'] = $globalVariables['applicationConfig']['config']['siteUrl'];
+    $variables['#attached']['drupalSettings']['globalVariables']['baseName'] = $globalVariables['applicationConfig']['config']['baseName'];
+    $variables['#attached']['drupalSettings']['globalVariables']['ceptenantId'] = $globalVariables['applicationConfig']['config']['ceptenantId'];
+    $variables['#attached']['drupalSettings']['globalVariables']['cadtenantId'] = $globalVariables['applicationConfig']['config']['cadtenantId'];
+    $variables['#attached']['drupalSettings']['globalVariables']['ceptenantCode'] = $globalVariables['applicationConfig']['config']['ceptenantCode'];
+    $variables['#attached']['drupalSettings']['globalVariables']['tenantCode'] = $globalVariables['applicationConfig']['config']['tenantCode'];
+    $variables['#attached']['drupalSettings']['globalVariables']['userLogged'] = \Drupal::currentUser()->isAuthenticated();
+// dump($variables);
+  }
+
+function engage_theme_page_attachments(array &$attachments) {
+  $attachments['#attached']['library'][] = 'engage_theme/global-scripts';
 }
 
 // function _engage_theme_has_homepage_slider(array $variables)

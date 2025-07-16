@@ -1,7 +1,41 @@
+global-library:
+  version: 9.x
+  header: true
+  css:
+    layout:
+      css/homepage.css: {}
+      css/homepage-res.css: {}
+    theme:
+      css/homepage.css: {}
+      css/homepage-res.css: {}
+  js:
+    js/engage.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupalSettings
+    - core/once
+
 global-styling:
   css:
     theme:
       assets/dist/css/styles.css: {}
+    base:
+      css/engage.css: {}
+    layout:
+      css/engage.css: {}
+  dependencies:
+    - core/drupal
+    - core/drupalSettings
+
+global-scripts:
+  version: 1.0
+  js:
+    js/engage.js: { attributes: { type: module } }
+  dependencies:
+    - core/drupal
+    - core/drupalSettings
+    - core/once
+
 
 flexslider:
   css:

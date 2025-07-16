@@ -45,7 +45,7 @@
 }
 
 /* Label default: inside the input */
-#engage_form_input .js-form-item label {
+#engage_form_input .js-form-item label:not(.error) {
     position: absolute;
     top: 0.50rem;
     /* 12px from top */
@@ -66,12 +66,12 @@
 }
 
 /* Label when input is focused or filled */
-#engage_form_input .js-form-item input:focus+label,
-#engage_form_input .js-form-item input:not(:placeholder-shown)+label,
-#engage_form_input .js-form-item select:focus+label,
-#engage_form_input .js-form-item select:not([value=""])+label,
-#engage_form_input .js-form-item input[type="date"]:focus+label,
-#engage_form_input .js-form-item input[type="date"]:not(:placeholder-shown)+label {
+#engage_form_input .js-form-item input:focus+label:not(.error),
+#engage_form_input .js-form-item input:not(:placeholder-shown)+label:not(.error),
+#engage_form_input .js-form-item select:focus+label:not(.error),
+#engage_form_input .js-form-item select:not([value=""])+label:not(.error),
+#engage_form_input .js-form-item input[type="date"]:focus+label:not(.error),
+#engage_form_input .js-form-item input[type="date"]:not(:placeholder-shown)+label:not(.error) {
     top: -1rem;
     font-size: 0.875rem;
     /* 14px */
@@ -80,9 +80,9 @@
     transform: translateY(0) scale(1);
 }
 
-/* Label when input is empty */
-#engage_form_input .js-form-item input:placeholder-shown+label,
-#engage_form_input .js-form-item input[type="date"]:placeholder-shown+label {
+/* label:not(.error) when input is empty */
+#engage_form_input .js-form-item input:placeholder-shown+label:not(.error),
+#engage_form_input .js-form-item input[type="date"]:placeholder-shown+label:not(.error) {
     top: 50%;
     transform: translateY(-50%) scale(1);
     font-size: 1rem;
@@ -98,7 +98,7 @@
     /* gray-400 */
 }
 
-#engage_form_input .js-form-item label.floating {
+#engage_form_input .js-form-item label:not(.error).floating {
     top: -0.65rem;
     transform: translateY(0) scale(0.875);
     font-size: 0.875rem;
